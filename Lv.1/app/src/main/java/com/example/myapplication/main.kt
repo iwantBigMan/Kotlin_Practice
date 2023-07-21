@@ -12,7 +12,7 @@ fun main(){
     val num1:Int = try{
         Integer.parseInt(readLine()!!)
     }catch (e: NumberFormatException){
-        println("잘못된 문자를 입력하였습니다.계산기를 종를합니다.")
+        println("잘못된 문자를 입력하였습니다. 계산기를 종료합니다.")
         return
     }
     val num2: Int = try{
