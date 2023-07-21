@@ -7,23 +7,22 @@ fun main(){
     val divi = Division()
     val remain = Remainder()
 
-    println("선택하시오 : +, -, *, /, %")
-    val arithmetic = readLine()
-    print("계산할 숫자를 입력하시오")
+
+    println("계산할 숫자를 입력하시오")
     val num1:Int = try{
         Integer.parseInt(readLine()!!)
     }catch (e: NumberFormatException){
-        println("잘못된 문자를 입력하였습니다.계산을 종료합니다.")
+        println("잘못된 문자를 입력하였습니다.계산기를 종를합니다.")
         return
     }
     val num2: Int = try{
         Integer.parseInt(readLine()!!)
     }catch (e: NumberFormatException){
-        println("잘못된 문자를 입력하였습니다. 계산을 종료합니다.")
+        println("잘못된 문자를 입력하였습니다. 계산기를 종료합니다.")
         return
     }
-
-    when (arithmetic) {
+    println("선택하시오 : +, -, *, /, %")
+    when (val arithmetic = readLine()) {
         "+" -> {
             // 덧셈일 때
             println("$num1 $arithmetic $num2 = ${add.operate(num1, num2)} 입니다")
@@ -46,6 +45,7 @@ fun main(){
         }
         else -> {
             // 잘못된 연산자 일 때
+            println("잘못된 연산자를 입력하셨습니다. 계산기를 종료합니다.")
             throw Exception("arithmetic is wrong")
         }
     }
